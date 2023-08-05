@@ -1,0 +1,232 @@
+.ok {
+  color: #034e88;
+  font-size: 50px;
+  position: relative;
+  z-index: 10;
+}
+.no {
+  color: aliceblue;
+  font-size: 50px;
+  position: relative;
+  z-index: 10;
+}
+h1 {
+  text-align: center;
+  font-family: fantasy;
+  font-size: 36px;
+  color: white;
+  height: 100px;
+  /* gap: 10px; */
+  padding: 40px;
+
+  background-color: #ee171f;
+}
+h3 {
+  text-align: center;
+  font-family: fantasy;
+  font-size: 36px;
+  color: white;
+  height: 100px;
+  /* gap: 10px; */
+  padding: 40px;
+  flex-grow: 4;
+}
+
+.pageSearch {
+  background-color: #ee171f;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 0px 0px 40px 0px;
+  font-size: 30px;
+}
+.pageSearch input {
+  border-radius: 20px;
+  width: 200px;
+
+  text-align: center;
+}
+
+.bg {
+  background-image: linear-gradient(#ee171f, #034e88);
+}
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 40px;
+  background-image: linear-gradient(#ee171f, #034e88);
+  min-height: 100vh;
+}
+
+.main2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 40px;
+}
+
+.main-perso-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 40px;
+  min-height: 100vh;
+}
+
+.main-comics {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 40px;
+  background-image: linear-gradient(#ee171f, #034e88);
+  min-height: 85vh;
+  font-family: fantasy;
+}
+.main-perso {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 40px;
+  background-image: linear-gradient(#ee171f, #034e88);
+  min-height: 85vh;
+  font-family: fantasy;
+}
+
+a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+  font-family: fantasy;
+}
+
+header > div {
+  background-image: url(https://cdn.marvel.com/content/1x/avas_p_0189_ss12.jpg);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 160px;
+  /* border-radius: 25px;*/
+
+  letter-spacing: 1px;
+}
+
+header img {
+  height: 162px;
+}
+
+header > div > div {
+  width: 500px;
+  height: 160px;
+  display: flex;
+  background-color: #ee171f;
+  justify-content: space-around;
+
+  align-items: center;
+}
+
+header span {
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+
+  height: 40px;
+  display: flex;
+  align-items: center;
+
+  padding: 15px;
+}
+
+.comics {
+  width: 700px;
+  max-height: 400px;
+  display: flex;
+  border-radius: 25px;
+  background-color: #ffffff21;
+}
+
+.comics-detail {
+  width: 1100px;
+  max-height: 650px;
+  display: flex;
+  border-radius: 25px;
+  background-color: #ffffff21;
+  margin: 40px 0 0 0;
+}
+
+.comics-detail img {
+  max-width: 500px;
+  max-height: 700px;
+  border-radius: 25px;
+  object-fit: contain;
+}
+
+.comics-detail div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 500px;
+  margin: 20px;
+}
+
+.comics-detail h2 {
+  font-size: 25px;
+}
+.comics-detail p {
+  font-size: 18px;
+  height: 350px;
+  font-family: monospace;
+  overflow: auto;
+}
+
+.comics img {
+  max-width: 400px;
+  max-height: 400px;
+  border-radius: 25px;
+  object-fit: contain;
+}
+
+.comics div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 400px;
+  margin: 20px;
+}
+
+.comics h2 {
+  font-size: 20px;
+}
+.comics p {
+  font-size: 15px;
+  height: 250px;
+  font-family: monospace;
+  overflow: auto;
+}
+
+.personnages {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 25px;
+  background-color: #ffffff21;
+}
+.personnages img {
+  max-width: 400px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 5%;
+}
+.personnages div {
+  max-width: 400px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  font-size: 26px;
+}
