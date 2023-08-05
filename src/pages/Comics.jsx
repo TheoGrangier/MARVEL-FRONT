@@ -31,7 +31,7 @@ function Comics() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/comics/skip/${skip[0]}`
+          `https://site--back-marvel--mzg7q6y4d5k4.code.run/comics/skip/${skip[0]}`
         );
         console.log("ici ", response.data);
         if (response.data.comics.count > 0) {
@@ -48,7 +48,7 @@ function Comics() {
     const fetchDataSearchSkip = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/comics/search/${search}/${skip[0]}`
+          `https://site--back-marvel--mzg7q6y4d5k4.code.run/comics/search/${search}/${skip[0]}`
         );
         console.log(response.data);
         if (response.data.comics.count > 0) {
@@ -73,7 +73,7 @@ function Comics() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/comics/search/${search}/0`
+          `https://site--back-marvel--mzg7q6y4d5k4.code.run/comics/search/${search}/0`
         );
         console.log(response.data);
         if (response.data.comics.count > 0) {
@@ -91,7 +91,9 @@ function Comics() {
 
     const fetchDataBasic = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/comics");
+        const response = await axios.get(
+          "https://site--back-marvel--mzg7q6y4d5k4.code.run/comics"
+        );
         console.log(response.data);
         setData(response.data);
         setStatut("normal");

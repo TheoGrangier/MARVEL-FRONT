@@ -27,7 +27,7 @@ function Personnages() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/personnages/skip/${skip[0]}`
+          `https://site--back-marvel--mzg7q6y4d5k4.code.run/personnages/skip/${skip[0]}`
         );
         console.log("ici ", response.data);
         if (response.data.personnages.count > 0) {
@@ -44,7 +44,7 @@ function Personnages() {
     const fetchDataSearchSkip = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/personnages/search/${search}/${skip[0]}`
+          `https://site--back-marvel--mzg7q6y4d5k4.code.run/personnages/search/${search}/${skip[0]}`
         );
         console.log(response.data);
         if (response.data.personnages.count > 0) {
@@ -69,7 +69,7 @@ function Personnages() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/personnages/search/${search}/0`
+          `https://site--back-marvel--mzg7q6y4d5k4.code.run/personnages/search/${search}/0`
         );
         console.log(response.data);
         if (response.data.personnages.count > 0) {
@@ -87,7 +87,9 @@ function Personnages() {
 
     const fetchDataBasic = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/personnages");
+        const response = await axios.get(
+          "https://site--back-marvel--mzg7q6y4d5k4.code.run/personnages"
+        );
         console.log(response.data);
         setData(response.data);
         setStatut("normal");

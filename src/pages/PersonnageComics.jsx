@@ -25,7 +25,7 @@ function PersonnageComics() {
 
         console.log(id);
         const response = await axios.get(
-          `http://localhost:3000/personnages/${id}`
+          `https://site--back-marvel--mzg7q6y4d5k4.code.run/personnages/${id}`
         );
         console.log(response.data);
         setData(response.data);

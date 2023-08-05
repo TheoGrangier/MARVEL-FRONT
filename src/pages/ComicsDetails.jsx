@@ -26,7 +26,9 @@ function ComicsDetails() {
         //const id = "5fcf91f4d8a2480017b91454";
 
         console.log(id);
-        const response = await axios.get(`http://localhost:3000/comics/${id}`);
+        const response = await axios.get(
+          `https://site--back-marvel--mzg7q6y4d5k4.code.run/comics/${id}`
+        );
         console.log(response.data);
         setData(response.data);
         setIsLoading(false);
