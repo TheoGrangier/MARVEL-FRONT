@@ -8,13 +8,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function PersonnageListe({ id, setFav, fav }) {
   const favorisString = Cookies.get("favoris");
-  console.log(favorisString);
+  // console.log(favorisString);
   const favorisJson = JSON.parse(favorisString);
-  console.log(favorisJson.perso[0]);
-
-  function refreshPage() {
-    window.location.reload(false);
-  }
+  // console.log(favorisJson.perso[0]);
 
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);
@@ -24,11 +20,11 @@ function PersonnageListe({ id, setFav, fav }) {
       try {
         //const id = "5fcf91f4d8a2480017b91454";
 
-        console.log(id);
+        // console.log(id);
         const response = await axios.get(
           `https://site--back-marvel--mzg7q6y4d5k4.code.run/personnages/${id}`
         );
-        console.log(response.data);
+        // console.log(response.data);
         setData(response.data);
         setIsLoading(false);
       } catch (error) {
@@ -61,7 +57,7 @@ function PersonnageListe({ id, setFav, fav }) {
           className={"ok"}
           onClick={(e) => {
             const index = favorisJson.perso.indexOf(data.personnageComics._id);
-            console.log("index ==>", index);
+            //console.log("index ==>", index);
             if (index > -1) {
               // only splice array when item is found
               favorisJson.perso.splice(index, 1); // 2nd parameter means remove one item only

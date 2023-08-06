@@ -10,9 +10,9 @@ import PersonnageListe from "../component/personnageList";
 
 function Favoris() {
   const favorisString = Cookies.get("favoris");
-  console.log(favorisString);
+  // console.log(favorisString);
   const favorisJson = JSON.parse(favorisString);
-  console.log(favorisJson.perso[0]);
+  // console.log(favorisJson.perso[0]);
 
   const { id } = useParams();
   const [data, setData] = useState();

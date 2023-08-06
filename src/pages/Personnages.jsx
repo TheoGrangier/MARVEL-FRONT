@@ -21,7 +21,7 @@ function Personnages() {
   const [skip, setSkip] = useState([0, "normal"]);
   const [statut, setStatut] = useState("normal");
 
-  console.log(search);
+  // console.log(search);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -29,14 +29,14 @@ function Personnages() {
         const response = await axios.get(
           `https://site--back-marvel--mzg7q6y4d5k4.code.run/personnages/skip/${skip[0]}`
         );
-        console.log("ici ", response.data);
+        //   console.log("ici ", response.data);
         if (response.data.personnages.count > 0) {
           setData(response.data);
           setStatut("normal");
           setIsLoading(false);
         }
 
-        console.log("dans le fetch", skip);
+        //  console.log("dans le fetch", skip);
       } catch (error) {
         console.log(error.response);
       }
@@ -46,7 +46,7 @@ function Personnages() {
         const response = await axios.get(
           `https://site--back-marvel--mzg7q6y4d5k4.code.run/personnages/search/${search}/${skip[0]}`
         );
-        console.log(response.data);
+        //  console.log(response.data);
         if (response.data.personnages.count > 0) {
           setData(response.data);
           setStatut("search");
@@ -71,7 +71,7 @@ function Personnages() {
         const response = await axios.get(
           `https://site--back-marvel--mzg7q6y4d5k4.code.run/personnages/search/${search}/0`
         );
-        console.log(response.data);
+        //  console.log(response.data);
         if (response.data.personnages.count > 0) {
           setData(response.data);
           setStatut("search");
@@ -79,7 +79,7 @@ function Personnages() {
           setIsLoading(false);
         }
 
-        console.log("dans le fetch", search);
+        //  console.log("dans le fetch", search);
       } catch (error) {
         console.log(error.response);
       }
@@ -90,7 +90,7 @@ function Personnages() {
         const response = await axios.get(
           "https://site--back-marvel--mzg7q6y4d5k4.code.run/personnages"
         );
-        console.log(response.data);
+        //   console.log(response.data);
         setData(response.data);
         setStatut("normal");
         setSkip([0, "normal"]);

@@ -33,14 +33,14 @@ function Comics() {
         const response = await axios.get(
           `https://site--back-marvel--mzg7q6y4d5k4.code.run/comics/skip/${skip[0]}`
         );
-        console.log("ici ", response.data);
+        //  console.log("ici ", response.data);
         if (response.data.comics.count > 0) {
           setData(response.data);
           setStatut("normal");
           setIsLoading(false);
         }
 
-        console.log("dans le fetch", skip);
+        //  console.log("dans le fetch", skip);
       } catch (error) {
         console.log(error.response);
       }
@@ -50,14 +50,14 @@ function Comics() {
         const response = await axios.get(
           `https://site--back-marvel--mzg7q6y4d5k4.code.run/comics/search/${search}/${skip[0]}`
         );
-        console.log(response.data);
+        //   console.log(response.data);
         if (response.data.comics.count > 0) {
           setData(response.data);
           setStatut("search");
           setIsLoading(false);
         }
 
-        console.log("dans le fetch", search);
+        //      console.log("dans le fetch", search);
       } catch (error) {
         console.log(error.response);
       }
@@ -83,7 +83,7 @@ function Comics() {
           setIsLoading(false);
         }
 
-        console.log("dans le fetch", search);
+        //   console.log("dans le fetch", search);
       } catch (error) {
         console.log(error.response);
       }
@@ -94,7 +94,7 @@ function Comics() {
         const response = await axios.get(
           "https://site--back-marvel--mzg7q6y4d5k4.code.run/comics"
         );
-        console.log(response.data);
+        //  console.log(response.data);
         setData(response.data);
         setStatut("normal");
         setSkip([0, "normal"]);
@@ -163,7 +163,7 @@ function Comics() {
                     onClick={(e) => {
                       const index = favorisJson.comics.indexOf(comics._id);
 
-                      console.log("index ==>", index);
+                      // console.log("index ==>", index);
 
                       if (index > -1) {
                         // only splice array when item is found

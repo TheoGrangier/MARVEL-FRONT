@@ -8,11 +8,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function ComicsDetails() {
   const favorisString = Cookies.get("favoris");
 
-  console.log(favorisString);
+  // console.log(favorisString);
 
   const favorisJson = JSON.parse(favorisString);
 
-  console.log(favorisJson.perso[0]);
+  //  console.log(favorisJson.perso[0]);
 
   const [fav, setFav] = useState(favorisJson);
 
@@ -25,11 +25,11 @@ function ComicsDetails() {
       try {
         //const id = "5fcf91f4d8a2480017b91454";
 
-        console.log(id);
+        //  console.log(id);
         const response = await axios.get(
           `https://site--back-marvel--mzg7q6y4d5k4.code.run/comics/${id}`
         );
-        console.log(response.data);
+        //  console.log(response.data);
         setData(response.data);
         setIsLoading(false);
       } catch (error) {
@@ -65,7 +65,7 @@ function ComicsDetails() {
               onClick={(e) => {
                 const index = favorisJson.comics.indexOf(data.comicsDetail._id);
 
-                console.log("index ==>", index);
+                // console.log("index ==>", index);
 
                 if (index > -1) {
                   // only splice array when item is found

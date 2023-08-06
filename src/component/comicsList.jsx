@@ -3,17 +3,12 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Cookies from "js-cookie";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-//nfNfxET7SKxgZSaJ
 
 function ComicsListe({ id, setFav, fav }) {
   const favorisString = Cookies.get("favoris");
-  console.log(favorisString);
+  //console.log(favorisString);
   const favorisJson = JSON.parse(favorisString);
-  console.log(favorisJson.perso[0]);
-
-  function refreshPage() {
-    window.location.reload(false);
-  }
+  //console.log(favorisJson.perso[0]);
 
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);
@@ -23,11 +18,11 @@ function ComicsListe({ id, setFav, fav }) {
       try {
         //const id = "5fcf91f4d8a2480017b91454";
 
-        console.log(id);
+        // console.log(id);
         const response = await axios.get(
           `https://site--back-marvel--mzg7q6y4d5k4.code.run/comics/${id}`
         );
-        console.log(response.data);
+        // console.log(response.data);
         setData(response.data);
         setIsLoading(false);
       } catch (error) {
